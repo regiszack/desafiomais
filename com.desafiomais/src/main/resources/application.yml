@@ -1,0 +1,38 @@
+security:
+  oauth2:
+    client:
+      clientId: 547823131329-esvvi32cb1lvu4dikf6skm3jin7hataq.apps.googleusercontent.com
+      clientSecret: p_fxKzyRbsXLGEuKYciEA9vJ
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      access-token-validity-seconds: 120
+      clientAuthenticationScheme: form
+      scope:
+        email
+        profile
+    resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp      
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:mysql://localhost:3306/desafiomais?useSSL=false
+    username: root
+    password: 1234
+      
+flyway:
+  enabled: false
+  
+liquibase:
+  enabled: false
+  change-log: classpath:/data/changelog/db.changelog-master.xml
+  
+  
+  
